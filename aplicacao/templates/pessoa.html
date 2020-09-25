@@ -1,0 +1,9 @@
+<ul>
+{% for pessoa in pessoas_adultas %}
+	<li>
+		<a href="#">{{ pessoa.nome }}</a>
+	</li>
+{% endfor %}
+</ul>
+
+Total de pessoas: {{ pessoas_adultas|length }}

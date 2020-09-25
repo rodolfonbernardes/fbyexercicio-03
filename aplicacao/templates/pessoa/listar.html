@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block xpto %}
+            
+	{% if listapessoas %}
+		<h3>Foram encontradas {{ listapessoas | length }} pessoas!</h3>
+		<ul>
+		{% for p in listapessoas %}
+			<li><a href="/aplicacao/pessoa/{{ p.id }}/">{{ p.nome }}</a></li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>Não há pessoas cadastradas.</p>
+	{% endif %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block xpto %}
+
+<h1>Criar pessoa</h1>
+
+<form method="post">
+  {% csrf_token %} {{ form }}
+  <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}
